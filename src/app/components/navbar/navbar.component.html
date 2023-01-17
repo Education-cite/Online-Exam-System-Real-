@@ -1,0 +1,70 @@
+<mat-toolbar color="accent">
+    <a routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu_book</mat-icon>
+    </a>
+    <span routerLink="/" style="cursor: pointer;">Exam portal</span>
+    <span class="example-spacer"></span>
+    <a 
+    routerLink="/" 
+    mat-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with heart icon">
+      <!-- <mat-icon>login</mat-icon>  -->
+      Home      
+    </a>
+
+    <a 
+    routerLink="about" 
+    mat-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with heart icon">
+      <!-- <mat-icon>login</mat-icon>  -->
+      About      
+    </a>
+
+
+    <a 
+    routerLink="course" 
+    mat-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with heart icon">
+      <!-- <mat-icon>login</mat-icon>  -->
+      Courses      
+    </a>
+
+
+    <a 
+    routerLink="contuct" 
+    mat-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with heart icon">
+      <!-- <mat-icon>login</mat-icon>  -->
+      Contuct     
+    </a>
+
+
+    <a 
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'" 
+    mat-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with heart icon">
+      <!-- <mat-icon>login</mat-icon>  -->
+      Login      
+    </a>
+
+    <a 
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'" 
+    mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <!-- <mat-icon>login</mat-icon>  -->
+      Register       
+    </a>
+
+  
+   
+
+
+    <a 
+    *ngIf="isLoggedIn && user!=null"
+    (click)="logout()"
+   
+    mat-button class="example-icon favorite-icon ml20"  aria-label="Example icon-button with heart icon">
+    Logout      
+     <!-- <mat-icon>logout</mat-icon> -->
+    </a>
+
+   
+   
+  </mat-toolbar>
+  

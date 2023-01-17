@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card-header">All Categories</div>
+
+        <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let c of categories">
+                    <div >{{c.title}}</div>
+                    <div style="font-size:12px;">{{c.description}}</div>
+                    <div>
+                        <button type="submit" style="font-size: xx-small;" class="btn btn-danger" (click)="deletecategory(c.cid)">Delete</button>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="container text-center mt20">
+                <button style="font-size: xx-small;" routerLink="/admin/add-category" type="button" class="btn btn-primary" >Add New Category</button>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

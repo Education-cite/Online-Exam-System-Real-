@@ -1,0 +1,74 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt20">
+
+                    <mat-card-header>
+                        <mat-card-title>
+                            Read the instructions before starting test carefully
+                        </mat-card-title>
+
+                        <mat-card-subtitle>
+                            One step more to go.
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content>
+
+                        <h3><b>{{Quizzes.title}}</b></h3>
+
+                       <p>{{Quizzes.description}}</p>
+
+                       <mat-divider></mat-divider>
+
+                       <h3><b>Important instructions</b></h3>
+
+                       <ul>
+                           <li>This quiz is only for practice purpose</li>
+                           <li>You have to submit quiz with in <b> {{Quizzes.numberofQuestions *2}}  Minutes</b></li>
+                           <li>You can attemp the quiz may time.</li>
+                           <li>In this quiz <b>{{Quizzes.numberofQuestions}}</b> questions</li>
+
+                           <li>Each questions carries <b>{{Quizzes.maxMarks/Quizzes.numberofQuestions}}</b> marks, no negative marking for wrong ones.</li>
+                       
+                           <li>All questions of MCQ type.</li>
+                       
+                        </ul>
+
+                        <mat-divider></mat-divider>
+                        <h3><b>Attemping Quiz</b></h3>
+
+                       <ul>
+                           <li>Click <b>Start button to start test.</b></li>
+                           <li>If you quit this quiz you can not resume the quiz.</li>
+                           <li>When quiz started do not click on the back or next button..</li>
+                           <li>When quiz started do not Refresh the page</li>
+
+                           
+                           <li>Report of the quiz will be automatically genrated.</li>
+
+                           <li>Scroll up or down for next or preious questions.</li>
+                       
+                        </ul>
+
+                    </mat-card-content><br>
+
+                    <div class="text-center">
+
+                            
+                        <button mat-raised-button color="primary"
+
+                        (click)="startQuiz()"
+                        >Start quiz</button>
+
+                    </div>
+
+
+                </mat-card>
+
+                
+            </div>
+        </div>
+    </div>
+</div>

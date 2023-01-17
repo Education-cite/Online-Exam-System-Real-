@@ -1,0 +1,77 @@
+<div class="card" style="background-color: aquamarine;">
+    <div class="card-body">
+      <h5 class="card-title">Add New Quiz</h5>
+  
+      <div class="bootstrap-wrapper">
+        <div class="container">
+  
+          <div class="row">
+  
+            <div class="col-md-8 offset-md-2">
+  
+  
+              <form action="" class="full-width" (ngSubmit)="addQuiz()">
+                <div class="form-group">
+                  <label for="title">Enter Title</label>
+                  <input [(ngModel)]="quizData.title" type="text" name="title" class="form-control" id="title" placeholder="Enter Here" required>
+                </div><br>
+  
+                <div class="form-group">
+                  <label for="description">Enter Description:</label>
+                  <textarea [(ngModel)]="quizData.description" id="description" name="description" placeholder="Enter category Description" rows="5"
+                    cols="60"> </textarea>
+  
+  
+                
+    <div class="row">
+      <div class="col">
+       <label for="Marks">Maximum Marks</label>
+       <input [(ngModel)]="quizData.maxMarks" type="text" name="Marks" class="form-control" id="Marks" placeholder="Enter Here">
+      </div>
+      
+      
+      <div class="col">
+        <label for="number">Number Of Questions</label>
+        <input [(ngModel)]="quizData.numberofQuestions" type="text" name="number" class="form-control" id="number" placeholder="Enter Here">
+      </div>
+    </div><br>
+  
+  
+  
+                  <label for="status"> Publish Status:</label>&nbsp;
+                  <label class="switch">
+                    <input name="active" [(ngModel)]="quizData.active" type="checkbox" id="status" checked>
+                    <span class="slider round"></span>
+                  </label><br><br>
+  
+  
+  
+  
+                  <div class="input-group mb-3">
+                    <select [(ngModel)]="quizData.category.cid" class="form-select" name="category">
+                      <option selected>Choose...</option>
+                      <option *ngFor="let c of categories" [value]="c.cid">{{ c.title}}</option>
+                    </select>&nbsp;
+                    <label class="input-group-text">Chose Options</label>
+                  </div>
+  
+  
+                  <div class="container text-center">
+  
+                    <button type="submit" class="btn btn-success">Add Quiz</button>&nbsp;
+
+                    <button class="btn btn-success" routerLink="/admin/quizzes">view Quiz</button>
+                       
+
+
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

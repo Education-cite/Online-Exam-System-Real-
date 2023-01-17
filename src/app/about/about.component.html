@@ -1,0 +1,54 @@
+
+ <!-- ABOUT -->
+ <section id="about">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-6 col-sm-12">
+                   <div class="about-info">
+                        <h2>Start your journey to a better life with online Exam courses</h2>
+
+                        <figure>
+                             <span><i class="fa fa-users"></i></span>
+                             <figcaption>
+                                  <h3>Preparation for job</h3>
+                                  <p>This app will help you best preparation for any compatative exam</p>
+                             </figcaption>
+                        </figure>
+
+                        <figure>
+                             <span><i class="fa fa-users"></i></span>
+                             <figcaption>
+                                  <h3>Best Practice Any time</h3>
+                                  <p>We are update ficture and update quiz this site for your best practice</p>
+                             </figcaption>
+                        </figure>
+
+                        <figure>
+                             <span><i class="fa fa-bar-chart-o"></i></span>
+                             <figcaption>
+                                  <h3>Free for 3 months</h3>
+                                  <p>You will try this course for free only 3 months</p>
+                             </figcaption>
+                        </figure>
+                   </div>
+              </div>
+
+              <div class="col-md-offset-1 col-md-4 col-sm-12">
+                   <div class="entry-form">
+                        <form (ngSubmit)="formSubmit()">
+                             <h2>Login today</h2>
+                             <input type="text"  name="username" class="form-control" placeholder="Full name" required="" [(ngModel)]="loginData.username">
+
+
+                             <input type="password" name="password" class="form-control" placeholder="Your password" required="" [(ngModel)]="loginData.password">
+
+                             <button class="submit-btn form-control" id="form-submit">Get started</button>
+                        </form>
+                   </div>
+              </div>
+
+         </div>
+    </div>
+</section>
+
